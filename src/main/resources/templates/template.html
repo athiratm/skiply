@@ -1,0 +1,53 @@
+<style>
+	div.outer {
+		border: 5px solid blue;
+	}
+</style>
+
+<body>
+	<div class="outer">
+		<img th:src="@{static/images/logo_small.png}" width="100%" height="300px" />
+		<br/>
+		<div style="width:100%;background-color:blue;"><span
+				style="background-color:blue;font-weight:bold;color:white">Your transaction is
+				Successful</span></div>
+		Hi <span style="font-weight:bold" th:text="${student.studentName}"></span>,<br>
+		<n></n>
+		Congratulations! Your payment transaction is successful with <span style="font-weight:bold"
+			th:text="${student.schoolName}"></span> for
+		<span style="font-weight:bold" th:text="${student.studentName}"></span> student of <span
+			th:text="${student.studentGrade}"></span>
+		<div>
+			<span style="font-weight:bold">Kindly find the details below:</span>
+		</div>
+		<div style="text-align: center;">
+			<span align="center" style="font-weight:bold;color:blue;">Transaction Details:</span>
+		</div>
+		<div>
+			<img th:src="@{../images/logo_large.png}" />
+			<div>
+				<span style="font-weight:bold;color:blue;">></span> Date & Time: <span
+					th:text="${receipt.dateTime}"></span><br />
+				<span style="font-weight:bold;color:blue;">></span> Student Name: <span
+					th:text="${student.studentName}"></span><br />
+				<span style="font-weight:bold;color:blue;">></span> Student ID: <span
+					th:text="${student.id}"></span><br />
+				<span style="font-weight:bold;color:blue;">></span> Reference #: <span
+					th:text="${receipt.id}"></span><br />
+				<span style="font-weight:bold;color:blue;">></span> Card #: <span
+					th:text="${receipt.cardNumber}"></span><br />
+				<span style="font-weight:bold;color:blue;">></span> Card Type: <span
+					th:text="${receipt.cardType}"></span><br />
+			</div>
+		</div>
+		<div style="text-align: center;">
+			<span align="center" style="font-weight:bold;color:blue;">Purchase Details</span>
+			<div>
+				Tuition Fees: <span th:text="${receipt.fee}"></span>
+			</div>
+		</div>
+	</div>
+
+	</div>
+
+</body>
